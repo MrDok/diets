@@ -14,5 +14,5 @@ public interface UserService{
     void addDiet(Long id, Diet diet);
     void removeDiet(Long id);
     User logIn(String login, String password);
-    User signIn(String login, String password);
+    void signIn(String login, String password);
 }

@@ -56,9 +56,9 @@ public class UserServiceImpl implements UserService{
         return (User) query.getSingleResult();
     }
 
-    public User signIn(String login, String password){
+    public void signIn(String login, String password){
         User user = new User(login, password, false);
 
-        return (User) HibernateUtils.getSession().save(user);
+        HibernateUtils.getSession().save(user);
     }
 }

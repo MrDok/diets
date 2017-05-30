@@ -22,6 +22,6 @@ public class UserSignIn extends HttpServlet{
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         UserService userService = new UserServiceImpl();
-        User user = userService.signIn(login, password);
+        userService.signIn(login, password);
     }
 }
